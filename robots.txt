@@ -1,0 +1,11 @@
+# robots.txt for Solid Ideas Aero Website
+
+# Allow all search engines to index the site
+User-agent: *
+Allow: /
+
+# Sitemap location (update when sitemap is created)
+Sitemap: https://solidideas82.github.io/solidideasaero-web/sitemap.xml
+
+# Crawl delay (optional - helps manage server load)
+Crawl-delay: 10
