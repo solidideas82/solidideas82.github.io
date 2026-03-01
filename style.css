@@ -40,4 +40,23 @@
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('h-nebula-render.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
+.full-width-logo {
+  width: 100%;
+  height: auto;
+}
+.logo-container {
+  width: 100%;
+  text-align: left; /* Or center if you prefer */
+}
+
+nav {
+  width: 100%;
+}
+.logo-container {
+  width: 100%;
+  text-align: center; /* Or left, depending on desired alignment */
+}
+
+nav {
+  width: 100%;
 }
