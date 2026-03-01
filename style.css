@@ -161,5 +161,24 @@
       text-align: center;
       padding: 20px 0;
       border-top: 1px solid rgba(0, 242, 255, 0.1);
-    }
+/* Tighter Header & Logo Layout */
+.logo-container {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0 5px 0;
+    background: #05070a;
+}
+
+.full-width-logo {
+    display: inline-block;
+    max-height: 100px; /* This will make it much less tall */
+    width: auto;
+    max-width: 90%;
+    filter: drop-shadow(0 0 8px rgba(0, 242, 255, 0.3)); /* Adds a subtle glow */
+}
+
+nav {
+    position: relative;
+    padding: 10px 0;
+}
     
