@@ -1,62 +1,165 @@
-/* Update the Hero Section */
-.hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('h-nebula-hero.jpg.png') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-}
-
-/* Add this to the bottom for the new Gallery */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 40px 20px;
-    background: #0b0d17;
-}
-
-.gallery-grid figure {
-    margin: 0;
-    text-align: center;
-    border: 1px solid #1a1e2e;
-    padding: 15px;
-    background: #141824;
-}
-
-.gallery-grid img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-}
-
-.gallery-grid figcaption {
-    margin-top: 10px;
-    color: #a0a4b8;
-    font-size: 0.9rem;
-}
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('h-nebula-render.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-.full-width-logo {
-  width: 100%;
-  height: auto;
-}
-.logo-container {
-  width: 100%;
-  text-align: left; /* Or center if you prefer */
-}
-
-nav {
-  width: 100%;
-}
-.logo-container {
-  width: 100%;
-  text-align: center; /* Or left, depending on desired alignment */
-}
-
-nav {
-  width: 100%;
-}
+/* Dark Aerospace Theme */
+    body {
+      background-color: #05070a;
+      color: #e0e6ed;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(10, 15, 25, 0.7);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 10px 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(0, 242, 255, 0.2);
+    }
+    
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+    
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+    
+    nav ul li a {
+      color: #e0e6ed;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    
+    nav ul li a:hover {
+      color: #00f2ff;
+    }
+    
+    section {
+      padding: 60px 0;
+      position: relative;
+      background-color: transparent;
+    }
+    
+    section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 30px 30px;
+      opacity: 0.3;
+      z-index: -1;
+    }
+    
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #e0e6ed;
+      background: url('h-nebula-hero.jpg.png') no-repeat center center/cover;
+      position: relative;
+    }
+    
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(ellipse at center, rgba(5, 7, 10, 0.6) 0%, rgba(5, 7, 10, 0.95) 100%);
+      z-index: 1;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .hero h1 {
+      font-size: 3.5em;
+      margin-bottom: 20px;
+      color: #00f2ff;
+    }
+    
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      padding: 10px 25px;
+      background-color: #00f2ff;
+      color: #05070a;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+    }
+    
+    .cta-button:hover {
+      background-color: #00c1cc;
+      box-shadow: 0 0 20px rgba(0, 242, 255, 0.8);
+    }
+    
+    .full-width-logo {
+      display: block;
+      margin: 40px auto;
+      max-height: 250px;
+      width: auto;
+    }
+    
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px 0;
+    }
+    
+    .gallery-item {
+      border: 2px solid transparent;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+      border-radius: 5px;
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    .gallery-item:hover {
+      border-color: #00f2ff;
+      box-shadow: 0 0 15px rgba(0, 242, 255, 0.7);
+    }
+    
+    footer {
+      background-color: #030406;
+      color: #a0a6ad;
+      text-align: center;
+      padding: 20px 0;
+      border-top: 1px solid rgba(0, 242, 255, 0.1);
+    }
+    
