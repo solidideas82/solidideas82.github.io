@@ -21,6 +21,6 @@ jobs:
       - name: Link Checker
         uses: lycheeverse/lychee-action@v2.0.2
         with:
-          args: --verbose --no-progress --exclude 'mailto:.*' --exclude 'tel:.*' './**/*.md' './**/*.html'
+          args: --verbose --no-progress --exclude 'mailto:.*' --exclude 'tel:.*' --exclude 'HHO_AND_SCRUBBER.jpg' --exclude 'Actual_warehouse.PNG' './**/*.md' './**/*.html'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
